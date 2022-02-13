@@ -1,0 +1,397 @@
+
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: logoFont;
+    src: url(..//fonts/VintageParty-FreeVersion.ttf);
+}
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/CaviarDreams_Bold.ttf);
+}
+@font-face {
+    font-family: coolveticaFont;
+    src: url(../fonts/coolvetica_rg.otf);
+}
+@font-face {
+    font-family: coolveticaFont2;
+    src: url(..\fonts\coolveticacrammerg.otf);
+}
+:root{
+    --clr-primary: rgb(255, 100, 100);
+    --clr-yellow: rgb(255, 225, 98);
+    --clr-green: rgb(145, 196, 131);
+    --clr-gray: rgb(238, 238, 238);
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+p{
+    font-family: mainFont;
+}
+.pictures{
+    top:0;
+    z-index: -1;
+}
+.pictures img{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 5%;
+}
+.pictures #blackpepper1{
+    right: 5%;
+    top:100px;
+}
+.pictures #blackpepper2{
+    right: 7%;
+    top:500px;
+}
+.pictures #blackpepper3{
+    right: 20%;
+    top:200px;
+}
+.pictures #blackpepper4{
+    right: 15%;
+    top:440px;
+}
+.pictures #pepper{
+    right: 15%;
+    top:100px;
+}
+.pictures #pepper2{
+    right: 5%;
+    top:300px;
+    height: 400px;
+    width: 400px;
+    transform: rotate(-90deg);
+}
+.pictures #pepper3{
+    right: 8%;
+    top:280px;
+    height: 250px;
+    width: 250px;
+    transform: rotate(120deg);
+}
+.pictures #pepper4{
+    right: 13%;
+    top:140px;
+    transform: rotate(30deg);
+}
+.pictures #dill1{
+    right: 13.5%;
+    top:210px;
+    height: 400px;
+    width: 400px;
+    transform: rotate(-70deg);
+}
+.pictures #tomato{
+    right: 17.5%;
+    top:450px;
+    height: 360px;
+    width: 360px;
+    transform: rotate(110deg);
+}
+.pictures #carrot{
+    right: -2.5%;
+    top:400px;
+    height: 500px;
+    width: 500px;
+    transform: rotate(60deg);
+}
+.pictures #mushrooms{
+    right: 7%;
+    top:170px;
+    height: 150px;
+    width: 150px;
+}
+.pictures #mushrooms2{
+    right: 17.5%;
+    top:380px;
+    height: 150px;
+    width: 150px;
+    transform: rotate(-45deg);
+}
+.pictures #mushrooms3{
+    right: 11%;
+    top:630px;
+    height: 150px;
+    width: 150px;
+    transform: rotate(-85deg);
+}
+.pictures #dill2{
+    right: 9.5%;
+    top:400px;
+    height: 250px;
+    width: 250px;
+    transform: rotate(40deg);
+}
+.pictures #dill3{
+    right: 6.5%;
+    top:170px;
+    height: 250px;
+    width: 250px;
+}
+.pictures #aubergine{
+    right: 12.5%;
+    top:650px;
+    height: 200px;
+    width: 200px;
+}
+.pictures #aubergine2{
+    right: 10%;
+    top:50px;
+    height: 200px;
+    width: 200px;
+}
+.pictures #aubergine3{
+    right: 20%;
+    top:370px;
+    height: 200px;
+    width: 200px;
+}
+.pictures #salad{
+    right: 12%;
+    top:530px;
+    height: 400px;
+    width: 400px;
+    transform: rotate(10deg);
+}
+.pictures #onion1{
+    right: 5%;
+    top:800px;
+}
+.pictures #onion2{
+    right: 10%;
+    top:400px;
+}
+.pictures #radish{
+    right: 15%;
+    top:730px;
+    height: 400px;
+    width: 400px;
+    transform: rotate(-90deg);
+}
+.pictures #blackpepper5{
+    right: 14%;
+    top:750px;
+}
+.tencere #tencere{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+}
+.tencere #tencere2{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;   
+    z-index: -1;
+}
+.pictures img{
+    animation: rotateAll 3s ease-in forwards infinite alternate;
+}
+
+@keyframes rotateAll{
+    0%{
+        transform: rotate(-4deg);
+    }
+    100%{
+        transform: rotate(4deg);
+    }
+}
+
+#container .body-mid{
+    position: relative;
+    height: 100%;
+}
+#container .body-mid .left-side{
+    z-index: 1;
+}
+#container .body-mid .left-side .info{
+    display: flex;
+    height: 500px;
+}
+#container .body-mid .left-side .info .content{
+    width: 60%;
+    align-items: center;
+    vertical-align: middle;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin:  auto;
+}
+#container .body-mid .left-side .bckgrnd{
+    background-color: rgba(238, 238, 238, 0.4);
+    border-radius: 0 30px;
+}
+#container .body-mid .left-side .info h3{
+    color: var(--clr-primary);
+    font-family: coolveticaFont;
+    text-transform: uppercase;
+}
+#container .body-mid .info p{
+    font-size: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical; 
+    overflow:hidden;
+}
+#container .body-mid .left-side .info .img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    /*padding-left: 5%;
+    padding-right: 5%;*/
+}
+#container .body-mid .left-side .info .img img{
+    max-height: 100%;
+    object-fit: fill;
+}
+
+@media screen and (max-width: 1201px) {
+    
+    .pictures{
+        display: none;
+    }
+    .body-mid .tencere{
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px) {
+    
+    .pictures{
+        display: default;
+    }
+    .body-mid .tencere{
+        display: default;
+    }
+
+}
+@media screen and (max-width: 801px) {
+    #container .body-mid .left-side .info{
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    #container .body-mid .left-side .info .img{
+        display:none;
+    }
+    #container .body-mid .left-side .info .content{
+        margin: 0;
+        padding: 0;
+    }
+}
+@media screen and (min-width: 800px) {
+    #container .body-mid .left-side .info .img{
+        display: default;
+    }
+    #container .body-mid .left-side .info .content{
+        margin: default;
+    }
+}
+.body-mid .tencere{
+    position: relative;
+}
+#login{
+    height: 500px;
+    width: 100%;
+    background-color: var(--clr-primary);
+    z-index: 1;
+    margin: 0;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    color: var(--clr-gray);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+#login h3{
+    text-align: center;
+    font-family: coolveticaFont;
+    font-size: 48px;
+    padding: 0;
+}
+#login p{
+    padding: 0 5%;
+}
+#login .content{
+    padding: 0;
+    margin-top: 5%;
+}
+#login .content .buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login .content .buttons
+.login,.singIn{
+    cursor: pointer;
+    border: 2px solid;
+    padding: 1% 3%;
+    margin: 1%;
+    border-radius: 8px 0;
+    font-family: mainFont;
+    transition: 1s all;
+}
+#login .content .buttons
+.login:hover,.singIn:hover{
+border-color:var(--clr-primary);
+background-color: var(--clr-gray);
+color: var(--clr-primary);
+}
+#chef-recipes{
+    height: auto;
+    width: 100%;
+    z-index: 1;
+    margin: 4% 0;
+}
+#chef-recipes .content{
+    height: auto;
+}
+#chef-recipes .content .title{
+    text-align: center;
+    font-family: coolveticaFont;
+    color: var(--clr-primary);
+    font-size: 32px;
+}
+#chef-recipes p{
+    text-align:justify;
+    font-size: 14px;
+    padding:  1% 3%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical; 
+    overflow:hidden;
+}
+#container #login{
+    background-image: linear-gradient(to left, var(--clr-primary) 33.33%, transparent 60%), url(../pictures/Login_card.png);
+    background-size:contain;
+    background-position: left top;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+@media screen and (max-width: 1201px) {
+    #container #login{
+        background-image: linear-gradient(to top, var(--clr-primary) 33.33%, transparent 60%), url(../pictures/Login_card.png);
+    }
+    #container #login{
+    }
+}
+@media screen and (min-width: 1200px) {
+    #container #login{
+        background-image: linear-gradient(to left, var(--clr-primary) 33.33%, transparent 60%), url(../pictures/Login_card.png);
+    }
+    
+}
+

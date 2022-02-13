@@ -1,0 +1,213 @@
+*,*::before,*::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: logoFont;
+    src: url(..//fonts/VintageParty-FreeVersion.ttf);
+}
+@font-face {
+    font-family: mainFont;
+    src: url(../fonts/CaviarDreams_Bold.ttf);
+}
+@font-face {
+    font-family: coolveticaFont;
+    src: url(../fonts/coolvetica_rg.otf);
+}
+@font-face {
+    font-family: coolveticaFont2;
+    src: url(..\fonts\coolveticacrammerg.otf);
+}
+:root{
+    --clr-primary: rgb(255, 100, 100);
+    --clr-yellow: rgb(255, 225, 98);
+    --clr-green: rgb(145, 196, 131);
+    --clr-gray: rgb(238, 238, 238);
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+/* NavigationBar */
+.navbar-ub{
+    height: 60px;
+    background-color: var(--clr-yellow);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 10px 30px -10px;
+    align-items: center;
+    border-bottom-right-radius: 100px;  
+    border-bottom-left-radius: 100px;
+    margin:0;
+    width: 100%;  
+}
+#logo{
+    text-align: center;
+}
+.navbar-logo{
+    font-family: logoFont;
+    text-decoration: none;
+    font-size: 32px;
+    color: var(--clr-primary);
+    transition: 0.4s all;
+}
+.navbar-logo:hover{
+    color: var(--clr-primary);
+    text-shadow: 1px 1px 10px white,-1px -1px 10px white;
+}
+#menu{
+    margin:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+}
+#menu a{
+    text-decoration: none;
+    color: var(--clr-green);
+    font-family: mainFont;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    padding-right: 30px;
+}
+
+#menu a::after{
+    content: '';
+    display: block;
+    width: 0px;
+    height: 2px;
+    background-color: var(--clr-primary);
+    transition: width 1s;
+}
+/*#menu a::after:active{
+    content: '';
+    display: block;
+    width: 100%!important;
+    height: 2px;
+    background-color: var(--clr-primary);
+}*/
+#menu a:hover::after{
+    width: 100%;
+    transition: width 1s;
+}
+@media screen and (max-width: 767px) {
+    #menu{
+        display: none;
+    }
+    }
+    @media screen and (min-width: 768px) {
+    #menu{
+        display: flex;
+    }
+    }
+.navbar-ub #search-bar{
+    border: 2px solid var(--clr-primary);
+    background-color: white;
+    border-radius: 15px;
+    align-items: center;
+    padding: 2px;
+}
+#search-bar .search-bar-input{
+    flex-grow: 1;
+    border: 0;
+    background-color: transparent;
+    padding-left: 6px;
+}
+#search-bar .search-bar-input:focus{
+    outline: 0;
+}
+#search-bar .search-bar-button{
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    background-color: var(--clr-primary);
+    color: white;
+}
+#search-bar .search-bar-button:hover{
+    background-color: var(--clr-primary);
+}
+@media screen and (max-width: 991px) {
+    #search-bar{
+        display: none!important;
+    }
+}
+@media screen and (min-width: 992px) {
+#search-bar{
+    display: flex;
+}
+}
+#nav-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+#nav-right button{
+    margin-right: 40px;
+    border: 0;
+    background: transparent;
+    border-radius: 50%;
+    color: white;
+}
+#nav-right .nav-right-cart{
+    margin-right: 10px;
+}
+#nav-right .SingIn{
+    margin-right: 40px;
+    text-decoration: none;
+    color: var(--clr-primary);
+    font-family: mainFont;
+    font-size: 16px;
+    transition: 0.4s all;
+}
+#nav-right .SingIn:hover{
+    color: white;
+}
+/* Footer */
+.footer{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    background-color: var(--clr-yellow);
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    margin: 0;
+    padding: 20px;
+    position: relative;
+    z-index: 99;
+}
+.footer .second{
+    align-items: center;
+}
+.footer .second > div{
+    height: auto;
+}
+.footer .second .left img{
+    height: 40px;
+    width: 150px;
+    margin: 4px;
+}
+.footer .second .right i{
+    display: inline;
+    padding: 2px;
+
+}
+.footer .first{
+    padding: 25px;
+}
+.footer .first i{
+    display: block;
+}
+.footer .third{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--clr-primary);
+    font-family: logoFont;
+}
+.footer .third div h1:last-child{
+    color: var(--clr-green);
+}
+
+/* Layout */
