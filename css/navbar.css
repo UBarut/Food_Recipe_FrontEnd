@@ -1,6 +1,6 @@
-*,*::before,*::after{
-    box-sizing: border-box;
-}
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500;600&display=swap');
+
 @font-face {
     font-family: logoFont;
     src: url(..//fonts/VintageParty-FreeVersion.ttf);
@@ -16,6 +16,10 @@
 @font-face {
     font-family: coolveticaFont2;
     src: url(..\fonts\coolveticacrammerg.otf);
+}
+
+*,*::before,*::after{
+    box-sizing: border-box;
 }
 :root{
     --clr-primary: rgb(255, 100, 100);
@@ -64,14 +68,15 @@ body{
 }
 #menu a{
     text-decoration: none;
+    letter-spacing: 1px;
     color: var(--clr-green);
-    font-family: mainFont;
-    font-size: 18px;
+    font-family: coolveticaFont;
+    font-size: 20px;
     position: relative;
     z-index: 1;
     padding-right: 30px;
 }
-
+ 
 #menu a::after{
     content: '';
     display: block;
@@ -95,38 +100,52 @@ body{
     #menu{
         display: none;
     }
-    }
-    @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 768px) {
     #menu{
         display: flex;
     }
-    }
+}
 .navbar-ub #search-bar{
-    border: 2px solid var(--clr-primary);
+    outline: 2px solid var(--clr-primary);
     background-color: white;
     border-radius: 15px;
     align-items: center;
-    padding: 2px;
+    padding-right: 0;
+    padding-left: 1%;
+    height: 55%;
 }
-#search-bar .search-bar-input{
+#search-bar #search-bar-input{
     flex-grow: 1;
     border: 0;
+    height: 100%;
     background-color: transparent;
-    padding-left: 6px;
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+    z-index:1;
 }
-#search-bar .search-bar-input:focus{
+#search-bar #search-bar-input:focus{
     outline: 0;
 }
-#search-bar .search-bar-button{
+#search-bar span{
+    position: absolute;
+    color: gray;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: 'Dosis', sans-serif;
+}
+#search-bar #search-bar-button{
     cursor: pointer;
     border: 0;
+    height: 100%;
+    width: 16%;
     background: transparent;
-    border-radius: 50%;
+    border-radius: 15px;
     background-color: var(--clr-primary);
     color: white;
+    margin-right: -1px;
 }
-#search-bar .search-bar-button:hover{
-    background-color: var(--clr-primary);
+#search-bar #search-bar-button:hover{
 }
 @media screen and (max-width: 991px) {
     #search-bar{
@@ -157,8 +176,9 @@ body{
     margin-right: 40px;
     text-decoration: none;
     color: var(--clr-primary);
-    font-family: mainFont;
+    font-family: 'Dosis', sans-serif;;
     font-size: 16px;
+    font-weight: bold;
     transition: 0.4s all;
 }
 #nav-right .SingIn:hover{
@@ -177,9 +197,6 @@ body{
     position: relative;
     z-index: 99;
 }
-.footer .second{
-    align-items: center;
-}
 .footer .second > div{
     height: auto;
 }
@@ -191,7 +208,7 @@ body{
 .footer .second .right i{
     display: inline;
     padding: 2px;
-
+ 
 }
 .footer .first{
     padding: 25px;
@@ -209,5 +226,5 @@ body{
 .footer .third div h1:last-child{
     color: var(--clr-green);
 }
-
+ 
 /* Layout */

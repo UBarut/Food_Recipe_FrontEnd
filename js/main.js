@@ -1,13 +1,6 @@
-
-/*function ChangeSearchBar(){
-    document.getElementById("search-bar").style.backgroundColor = 'rgb(255, 100, 100)';
-    document.getElementById("search-bar").getElementsByClassName("search-bar-input").style.color = 'white';
-    document.getElementById("search-bar").getElementsByClassName("search-bar-button").style.color = 'rgb(255, 100, 100)';
-    document.getElementById("search-bar").getElementsByClassName("search-bar-button").style.background = 'white';
-}
-
-document.getElementsByClassName("search-bar-button").onclick = ChangeSearchBar;*/
-
+ 
+let inpSearchBar = document.getElementById("search-bar-input");
+let phSearchBar = document.getElementById("placeholder");
 let container = document.getElementById("container");
 let header = document.getElementsByTagName("header");
 let blackpepper1= document.getElementById("blackpepper1");
@@ -34,10 +27,37 @@ let salad= document.getElementById("salad");
 let onion1= document.getElementById("onion1");
 let radish= document.getElementById("radish");
 let tencere= document.getElementById("tencere");
-
+ 
+function FocusSearchBar(){
+    phSearchBar.style.fontSize = 12 +'px';
+    phSearchBar.style.fontWeight = "italic";
+    phSearchBar.style.top = 4+'px';
+    phSearchBar.style.padding = "0 0.5%";
+    phSearchBar.style.background = 'linear-gradient(180deg,rgb(255, 225, 98) 50%,white 50%)';
+    console.log();
+}
+function NotFocusSearchBar(){
+    console.log(inpSearchBar.value.length);
+    if(inpSearchBar.value.length == 0)
+    {
+        phSearchBar.style.fontSize = 14 +'px';
+        phSearchBar.style.fontWeight = "bold";
+        phSearchBar.style.top = "auto";
+        phSearchBar.style.background = 'transparent';
+        phSearchBar.style.padding = '0';
+    }
+}
+inpSearchBar.addEventListener("click",FocusSearchBar);
+inpSearchBar.addEventListener("blur",NotFocusSearchBar);
+ 
+ 
+ 
+ 
+ 
 window.addEventListener('scroll',function(){
     let scrollY = window.scrollY;
-    if(scrollY < 2000){ /*container.offsetHeight-this.screen.height+200*/
+    console.log(document.querySelector(".body-mid").offsetHeight);
+    if(scrollY < document.querySelector(".body-mid").offsetHeight-200){
         blackpepper1.style.top = scrollY * 0.9 + 100 +'px';
         blackpepper2.style.top = scrollY * 0.8 + 500 +'px';
         blackpepper3.style.top = scrollY * 1 + 200 +'px';
@@ -63,7 +83,7 @@ window.addEventListener('scroll',function(){
         radish.style.top = scrollY * 0.63 + 730 +'px';
     }
 })
-
+ 
 window.addEventListener("load",SettingScale);
 function SettingScale() {
 blackpepper1.style.height = 15.7894 * screen.width / 100 +"px";
@@ -89,7 +109,7 @@ salad.style.height = 15.7894 * screen.width / 100 +"px";
 onion1.style.height = 15.7894 * screen.width / 100 +"px";
 radish.style.height = 15.7894 * screen.width / 100 +"px";
 };
-
+ 
 window.addEventListener("load",SettingRotate);
 function SettingRotate() {
     /*Rastgele rotasyonlu yapacaksın*/
